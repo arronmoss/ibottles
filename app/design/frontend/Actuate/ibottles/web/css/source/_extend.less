@@ -505,6 +505,7 @@ button {
 		left: 0;
 		top: 0;
 		z-index: 10005;
+		z-index: 900;
 		background: #fff;
 		padding-bottom: 11px;
 		.header.panel {
@@ -587,6 +588,7 @@ button {
 		left: 0;
 		top: 80px;
 		z-index: 10000;
+		z-index: 800;
 	}
 	.block-search {
 		padding-left: 0 !important;
@@ -1007,6 +1009,9 @@ button {
 				font: 20px 'Barlow Condensed', sans-serif;
 				color: #404041;
 			}
+			.counter.qty {
+				padding: 0 1px;
+			}
 			&:before {
 				content: "";
 				width: 30px;
@@ -1149,6 +1154,10 @@ button {
 		max-width: 1200px;
 		padding: 0 20px;
 		margin: 0 auto;
+		.trustpilot-widget {
+			position:static!important;
+			/* the inline "relative" value was causing z-index issues with minicart */
+		}
 		#trustpilot-widget-trustbox-2-wrapper {
 			padding: 16px 0;
 		}
@@ -3629,7 +3638,19 @@ button {
 	    }
 	}
 }
+.modal-popup {
+	&._show {
+		z-index: 2000!important;
+		/* gets it over the cart popup, for removing items, have to add !important to override core inline value */
+	}
+	button {
+		min-width: 0;
+	}
+}
 
+.modal-popup.confirm .modal-inner-wrap .modal-content {
+	padding-right: 3rem;
+}
 .catalog-product-view {
 	.modal {
 		position: fixed;
@@ -3642,10 +3663,10 @@ button {
 	}
 	.modal-content {
 		background: #fff;
-		position: absolute;
-		left: 50%;
-		top: 50%;
-		transform: translate(-50%,-50%);
+		// position: absolute;
+		// left: 50%;
+		// top: 50%;
+		// transform: translate(-50%,-50%);
 		max-width: 600px;
 		width: 100%;
 		padding: 20px;
@@ -3747,6 +3768,9 @@ button {
 	}
 }
 .minicart-items {
+	.product > .product-item-photo {
+		width: 75px;
+	}
 	.product-item-details {
 		text-align: left;
 	}
@@ -3759,6 +3783,9 @@ button {
 			line-height: 1.3;
 			text-decoration: none;
 		}
+	}
+	.update-cart-item {
+		min-width: 50px;
 	}
 }
 .checkout-cart-index {
