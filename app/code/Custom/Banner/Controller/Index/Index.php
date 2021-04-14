@@ -34,8 +34,7 @@ class Index extends \Magento\Framework\App\Action\Action
 		  $noproduct='No Cap Required';
 		  
 		   $str.='<li class="items" id="0" onclick="getCap(0)" >';
-		            
-					 $str.='<div class="img" id="img-0"><img src=https://placehold.it/160x120&text=No%20Cap></div>';
+					 $str.='<div class="img" id="img-0"><img src="https://www.ibottles.co.uk/media/wysiwyg/no-cap.png" alt="No Cap"/></div>';
 					  $str.= '<div id="nm-0" class="nm">'.$noproduct.'</div>';
 					 $str.='<div id="price-0" class="price" style="display:none">'.$formattedPrice.'</div>';
 		   $str.="</li>";
