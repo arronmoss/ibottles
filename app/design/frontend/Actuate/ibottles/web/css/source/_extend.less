@@ -7376,46 +7376,50 @@ button {
 		}
 	}
 }
-/* Temp location for search changes */
-.header.content .log-desk {
-	margin-right: 20px;
+/* Search changes, desktop largely unaffected, but now appears on mobile */
+.page-header .header.content {
+	.log-desk {
+		margin-right: 20px;
+	}
+	.block-search {
+		display: block;
+		margin: 0;
+		.label:before {
+			position: absolute;
+		    top: 17px;
+		    right: 5px;
+		    color: #666;
+		}
+		.control {
+			border-top: 0;
+		}
+		input {
+			margin: 0;
+	}
 }
-.page-header .header.content .block-search {
-	display: block;
-	margin: 0;
-	height: 34px;
-}
-.page-header .header.content .block-search .control {
-	border-top: 0;
-}
-.page-header .header.content .block-search .label:before {
-	position: absolute;
-    top: 17px;
-    right: 5px;
-    color: #666;
-}
-.page-header .header.content .block-search input {
-	margin: 0;
 }
 @media only screen and (min-width:768px) {
 	.page-header .header.content .block-search {
 		position: absolute;
 		bottom: -53px;
 		right: 20px;
+		height: 34px;
 	}
 }
 @media only screen and (max-width:767px) {
-	.page-header .header.content .minicart-wrapper {
+	.header.content .minicart-wrapper {
 		margin-left: 0;
 		margin-right: 0;
 	}
 	.form .search-autocomplete {
 		display:none!important;
 	}
-	.page-header .header.content .block-search .amsearch-close {
-		top: 3px;
+	.page-header .header.content .block-search {
+		.amsearch-close {
+			top: 3px;
+		}
+		.amsearch-form-container.-opened .input-text {
+		    padding-left: 10px;
+		}
 	}
-	.page-header .header.content .block-search .amsearch-form-container.-opened .input-text {
-    padding-left: 10px;
-}
 }
