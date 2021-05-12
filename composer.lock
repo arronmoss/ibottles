@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "d1000217d77fac668514ecb5dbc539a2",
+    "content-hash": "cdbe4c82f7b817f69f990e89dade9711",
     "packages": [
         {
             "name": "amasty/amcart",
@@ -2036,6 +2036,50 @@
             "time": "2020-09-30T17:56:20+00:00"
         },
         {
+            "name": "dan0sz/resource-hints-magento2",
+            "version": "1.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Dan0sz/ResourceHints-magento2.git",
+                "reference": "870b134aee2fb6b6f1dac38b6a9eb67eed91559f"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Dan0sz/ResourceHints-magento2/zipball/870b134aee2fb6b6f1dac38b6a9eb67eed91559f",
+                "reference": "870b134aee2fb6b6f1dac38b6a9eb67eed91559f",
+                "shasum": ""
+            },
+            "require": {
+                "ext-json": "*",
+                "ext-openssl": "*",
+                "magento/framework": "101.*|102.*|103.*",
+                "php": "7.*"
+            },
+            "type": "magento2-module",
+            "autoload": {
+                "files": [
+                    "registration.php"
+                ],
+                "psr-4": {
+                    "Dan0sz\\ResourceHints\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "CC-BY-4.0"
+            ],
+            "authors": [
+                {
+                    "name": "Daan van den Bergh",
+                    "email": "info@daan.dev",
+                    "homepage": "https://daan.dev"
+                }
+            ],
+            "description": "Add `<link rel='preconnect'>`, `<link rel='prefetch'>` or `<link rel='preload'>` resource hints to Magento 2's head.",
+            "homepage": "https://daan.dev",
+            "time": "2021-01-20T13:20:16+00:00"
+        },
+        {
             "name": "donatj/phpuseragentparser",
             "version": "v0.16.0",
             "source": {
@@ -3304,6 +3348,7 @@
                 "console",
                 "laminas"
             ],
+            "abandoned": "laminas/laminas-cli",
             "time": "2019-12-31T16:31:45+00:00"
         },
         {
@@ -5443,11 +5488,6 @@
         {
             "name": "magento/composer",
             "version": "1.5.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/magento/composer.git",
-                "reference": "b2dcb2194629bc2eb03fd81cb9f4586ffe4b65b0"
-            },
             "dist": {
                 "type": "zip",
                 "url": "https://api.github.com/repos/magento/composer/zipball/b2dcb2194629bc2eb03fd81cb9f4586ffe4b65b0",
@@ -6579,7 +6619,10 @@
                         "mask": "0755",
                         "path": "bin/magento"
                     }
-                ]
+                ],
+                "patches_applied": {
+                    "Static maintenance pages": "patches/zero1_static_maintenance_page.patch"
+                }
             },
             "license": [
                 "OSL-3.0",
@@ -22305,12 +22348,12 @@
             "version": "1.8.0",
             "source": {
                 "type": "git",
-                "url": "https://github.com/webmozart/assert.git",
+                "url": "https://github.com/webmozarts/assert.git",
                 "reference": "ab2cb0b3b559010b75981b1bdce728da3ee90ad6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/webmozart/assert/zipball/ab2cb0b3b559010b75981b1bdce728da3ee90ad6",
+                "url": "https://api.github.com/repos/webmozarts/assert/zipball/ab2cb0b3b559010b75981b1bdce728da3ee90ad6",
                 "reference": "ab2cb0b3b559010b75981b1bdce728da3ee90ad6",
                 "shasum": ""
             },

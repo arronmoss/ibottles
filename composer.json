@@ -35,6 +35,7 @@
         "amasty/smtp": "^1.1",
         "amasty/sorting": "^2.8",
         "cweagans/composer-patches": "^1.7",
+        "dan0sz/resource-hints-magento2": "^1.2",
         "magento/product-community-edition": "2.3.5-p1",
         "mageplaza/module-smtp": "^4.1",
         "mdoq/module-connector": "^1.4",
