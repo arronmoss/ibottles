@@ -279,6 +279,7 @@ return [
         'Custom_Banner' => 1,
         'Custom_Csp' => 1,
         'Custom_Notifyme' => 1,
+        'Dan0sz_ResourceHints' => 1,
         'Dotdigitalgroup_Email' => 0,
         'Dotdigitalgroup_Chat' => 0,
         'Holbi_ExtendREST' => 1,
