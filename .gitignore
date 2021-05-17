@@ -1,7 +1,12 @@
 /.github
 /dev
+
+# MDOQ
 /mdoq
+!/mdoq/nginx/generated/cors_shared.conf 
+!/mdoq/nginx/templates/*
 !/mdoq/env.sh
+
 ._.DS_Store
 /blog
 /wp
