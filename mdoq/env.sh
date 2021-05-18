@@ -19,3 +19,4 @@ php bin/magento config:set paypal/wpp/sandbox_flag 1
 #bin/magento config:set smile_elasticsuite_core_base_settings/es_client/servers ${INSTANCEID}-elastic-search
 #bin/magento config:set catalog/search/engine elasticsuite
 
+# UPDATE admin_user SET interface_locale='en_GB' WHERE 1;
