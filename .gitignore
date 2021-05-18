@@ -2,10 +2,11 @@
 /dev
 
 # MDOQ
-/mdoq
-!/mdoq/nginx/generated/cors_shared.conf 
-!/mdoq/nginx/templates/*
-!/mdoq/env.sh
+/.vscode
+/mdoq/varnish/varnish.out.vcl
+/mdoq/nginx/generated/*
+!/mdoq/nginx/generated/cors_shared.conf
+/mdoq/nginx/includes/*
 
 ._.DS_Store
 /blog
