@@ -1,23 +1,16 @@
 <?xml version="1.0"?>
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
+    <!-- https://devdocs.magento.com/guides/v2.4/extension-dev-guide/security/content-security-policies.html -->
     <default>
         <csp>
             <mode>
                 <storefront>
-                    <report_uri>https://www.ibottles.co.uk/</report_uri>
-                    <report_uri>*.mdoq.io</report_uri>
-
-
-
-
+                    <report_only>0</report_only>
                 </storefront>
                 <admin>
-                    <report_uri>https://www.ibottles.co.uk/</report_uri>
-                    <report_uri>https://www-ibottles-co-uk-10766.04.mdoq.io/</report_uri>
-
+                    <report_only>0</report_only>
                 </admin>
             </mode>
- 
         </csp>
     </default>
 </config>
