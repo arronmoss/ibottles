@@ -43,6 +43,7 @@
         </policy>
         <policy id="connect-src">
             <values>
+                <value id="ibottles" type="host">static.ibottles.co.uk</value>
                 <value id="cloudflare" type="host">*.cloudflare.com</value>
                 <value id="paypal" type="host">*.paypal.com</value>
                 <value id="doubleclick" type="host">stats.g.doubleclick.net</value>
