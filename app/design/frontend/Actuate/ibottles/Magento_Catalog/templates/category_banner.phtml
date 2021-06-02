@@ -39,42 +39,15 @@
   
   <?php endif ?>
   
-    <?php if($catid==46): ?>
-  
-  <div class="title-banner-wrapper">
-			<div class="title-banner" style="background-image: url('<?php echo $mediaUrl ?>catalog/banner/Cosmetic_Banner_BG.png');">
-			<div class="banner-inner">
-
-									<div class="banner-image">
-						<img src="<?php echo $mediaUrl ?>catalog/banner/Cosmetic_Banner_FG_1.png" alt="The CosmeticsCollection">
-					</div>
-				
-				<div class="banner-text">
-					<h1><small><span><span style="color: #9b005d;">Discover what’s on offer at</span></span></small><span><span style="color: #d1145a;">The Cosmetics<br>Collection</span></span></h1>
-				</div>
-
-			</div>
-		</div>
+<?php if($catid==46): ?>
+	<?php // cosmestics ?>
+	<div class="title-banner-wrapper category-cosmetics">
+		<img src="<?php echo $mediaUrl ?>wysiwyg/banner_cosmetics_apr2021.jpg" alt="Discover what's on offer at The Cosmetics Collection" />
 	</div>
-  
-  <?php endif ?>
-  
-    <?php if($catid==49): ?>
-  
-  <div class="title-banner-wrapper">
-			<div class="title-banner" style="background-image: url('<?php echo $mediaUrl ?>/catalog/banner/CBD_Banner_BG.png');">
-			<div class="banner-inner">
-
-									<div class="banner-image">
-						<img src="<?php echo $mediaUrl ?>catalog/banner/CBD_Banner_FG.png" alt="CBD Bottles">
-					</div>
-				
-				<div class="banner-text">
-					<h1><small><span><span style="color: #ffdf42;">Explore our range of</span></span></small><span>CBD Bottles</span></h1>
-				</div>
-
-			</div>
-		</div>
+<?php endif; ?>
+<?php if($catid==49): ?>
+	<?php // CBD ?>
+	<div class="title-banner-wrapper category-cbd">
+		<img src="<?php echo $mediaUrl ?>wysiwyg/banner_cbd_apr2021.jpg" alt="Explore our range of CBD Bottles" />
 	</div>
-  
-  <?php endif ?>
+<?php endif; ?>

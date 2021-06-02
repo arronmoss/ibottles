@@ -7422,4 +7422,19 @@ button {
 		    padding-left: 10px;
 		}
 	}
+	/* Category banners, CBD & Cosmetics, on mobile the image stays full size and we just see the left half where the text is */
+	.title-banner-wrapper {
+		position: relative;
+		min-height: 260px;
+		overflow:hidden;
+		> img {
+			position: absolute;
+			top: 0;
+			left: 0;
+			max-width:1280px;	
+		}
+	}
+	.title-banner-wrapper.category-cosmetics {
+		min-height: 245px;
+	}
 }
