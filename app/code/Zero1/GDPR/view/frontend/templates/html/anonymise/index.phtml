@@ -1,0 +1,13 @@
+<?php
+/** @var Zero1\GDPR\Block\Customer\Anonymise\Index $block */
+$customerMessage = $block->getHelper()->getCustomerMessage();
+if (!empty($customerMessage)) {
+    echo $customerMessage;
+} else {
+    ?>
+<p>Are you sure you want to delete all information we have on record for you?</p>
+<p>After this you will no longer be able to login to your account, retrieve your account or view order and invoice history.</p>
+    <?php
+}
+?>
+<a href="<?php echo $this->getUrl('gdpr/anonymise/perform'); ?>">Delete My Account</a>

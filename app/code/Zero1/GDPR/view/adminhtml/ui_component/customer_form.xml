@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Ui:etc/ui_configuration.xsd">
+    <settings>
+        <buttons>
+            <!-- See "vendor/magento/module-customer/view/base/ui_component/customer_form.xml" -->
+            <button name="anonymise" class="Zero1\GDPR\Block\Adminhtml\Edit\Anonymise"/>
+        </buttons>
+    </settings>
+</form>
