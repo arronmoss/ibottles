@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
+    <default>
+        <customer>
+            <create_account>
+                <abn_auto_group_assign>1</abn_auto_group_assign>
+                <abn_frontend_visibility>1</abn_frontend_visibility>
+                <abn_tax_calculation_address_type>billing</abn_tax_calculation_address_type>
+                <abn_default_group>5</abn_default_group>
+                <abn_error_group>1</abn_error_group>
+                <abn_on_each_transaction>1</abn_on_each_transaction>
+            </create_account>
+        </customer>
+    </default>
+</config>

@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Event/etc/events.xsd">
+    <event name="customer_address_save_after">
+        <observer name="zero1_abnvalidation_customer_address_after_save" instance="Zero1\AbnValidation\Observer\AfterAddressSaveObserver" />
+    </event>
+    <event name="sales_quote_address_collect_totals_before">
+        <observer name="zero1_abnvalidation_validate_vat_number" instance="Zero1\AbnValidation\Observer\CollectTotalsObserver" />
+    </event>
+</config>

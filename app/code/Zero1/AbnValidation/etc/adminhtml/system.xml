@@ -1,0 +1,59 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <section id="customer">
+            <group id="create_account">
+                <field id="abn_auto_group_assign" translate="label" type="select" sortOrder="11" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Enable Automatic Assignment to Customer Group (Based on ABN)</label>
+                    <comment>To show ABN number on frontend, set Show ABN Number on Frontend option to Yes.</comment>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="abn_frontend_visibility" translate="label" type="select" sortOrder="12" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Show ABN on Frontend</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <depends>
+                        <field id="abn_auto_group_assign">1</field>
+                    </depends>
+                </field>
+                <field id="abn_tax_calculation_address_type" translate="label" type="select" sortOrder="13" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>ABN Tax Calculation Based On</label>
+                    <source_model>Magento\Customer\Model\Config\Source\Address\Type</source_model>
+                    <depends>
+                        <field id="abn_auto_group_assign">1</field>
+                    </depends>
+                </field>
+                <field id="abn_default_group" translate="label" type="select" sortOrder="14" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>ABN Default Group</label>
+                    <source_model>Magento\Customer\Model\Config\Source\Group</source_model>
+                    <validate>required-entry</validate>
+                    <depends>
+                        <field id="abn_auto_group_assign">1</field>
+                    </depends>
+                </field>
+                <field id="abn_error_group" translate="label" type="select" sortOrder="15" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>ABN Error Group</label>
+                    <source_model>Magento\Customer\Model\Config\Source\Group</source_model>
+                    <validate>required-entry</validate>
+                    <depends>
+                        <field id="abn_auto_group_assign">1</field>
+                    </depends>
+                </field>
+                <field id="abn_on_each_transaction" translate="label" type="select" sortOrder="16" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Validate ABN on Each Transaction</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <depends>
+                        <field id="abn_auto_group_assign">1</field>
+                    </depends>
+                </field>
+
+                <!-- <field id="vat_frontend_visibility" translate="label comment" type="select" sortOrder="58" showInDefault="1" showInWebsite="1" canRestore="1" showInStore="1" /> -->
+            </group>
+        </section>
+    </system>
+</config>

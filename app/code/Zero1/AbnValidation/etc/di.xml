@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <!-- CLI commands -->
+    <type name="Magento\Framework\Console\CommandList">
+        <arguments>
+            <argument name="commands" xsi:type="array">
+                <item name="zero1_abnvalidation_testabn" xsi:type="object">Zero1\AbnValidation\Console\Command\TestAbnCommand</item>
+            </argument>
+        </arguments>
+    </type>
+
+    <type name="Magento\Customer\Api\AddressRepositoryInterface">
+        <plugin name="zero1_abnvalidation_customer_address" type="Zero1\AbnValidation\Plugin\CustomerAddress" sortOrder="1" disabled="false" />
+    </type>
+
+    <!-- <preference for="Zero1\JobSheets\Service\RendererInterface" type="Zero1\JobSheets\Service\Renderer"/>
+    <preference for="Zero1\JobSheets\Service\BulkRendererInterface" type="Zero1\JobSheets\Service\BulkRenderer"/> -->
+</config>
