@@ -295,19 +295,18 @@ return [
         'Mdoq_Connector' => 1,
         'Staempfli_ImageResizer' => 1,
         'StripeIntegration_Payments' => 1,
+        'Swissup_AddressFieldManager' => 1,
+        'Swissup_Core' => 1,
+        'Swissup_FieldManager' => 1,
         'Temando_ShippingRemover' => 1,
         'Trustpilot_Reviews' => 1,
         'Ubertheme_Ubdatamigration' => 0,
         'Vertex_Tax' => 1,
         'Vertex_AddressValidation' => 1,
         'WebShopApps_MatrixRate' => 1,
-        'Swissup_AddressFieldManager' => 1,
-        'Swissup_Core' => 1,
-        'Swissup_FieldManager' => 1,
         'Yotpo_Yotpo' => 0,
         'Zero1_Base' => 1,
         'Zero1_Patches' => 1,
-        'Zero1_AbnValidation' => 1,
         'Zero1_ReleaseLibrary' => 1
     ]
 ];
