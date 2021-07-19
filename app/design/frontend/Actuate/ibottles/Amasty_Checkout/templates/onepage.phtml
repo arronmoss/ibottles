@@ -1,0 +1,122 @@
+<?php
+/**
+ * @author Amasty Team
+ * @copyright Copyright (c) 2020 Amasty (https://www.amasty.com)
+ * @package Amasty_Checkout
+ */
+?>
+<?php
+/** @var \Magento\Checkout\Block\Onepage $block */
+/** @var \Amasty\Checkout\Helper\Onepage $helper */
+/** @var \Amasty\Checkout\Model\Optimization\BundleService $bundleService */
+$helper = $block->getData('amcheckout_helper');
+$bundleService = $block->getData('bundleService');
+$design = $helper->isModernCheckoutDesign() ? 'modern' : 'classic';
+$layout = $helper->getDesignLayout();
+?>
+
+<div id="checkout"
+     data-bind="scope:'checkout'"
+     class="checkout-container am-checkout -<?= /* @noEscape */ $design?> -layout-<?= /* @noEscape */ $layout?>"
+     data-amcheckout-js="checkout">
+    <div class="checkout-header">
+        <h1 class="title"><?= $block->escapeHtml($helper->getTitle()); ?></h1>
+        <div class="description"><?= /* @noEscape */ $helper->getDescription(); ?></div>
+    </div>
+
+    <div id="checkout-loader" data-role="checkout-loader" class="loading-mask" data-mage-init='{"checkoutLoader": {}}'>
+        <div class="loader">
+            <img src="<?=
+            /* @noEscape */ $block->getViewFileUrl('images/loader-1.gif'); ?>"
+                 alt="<?= $block->escapeHtml(__('Loading...')); ?>"
+                 style="position: absolute;">
+        </div>
+    </div>
+    <!-- ko template: getTemplate() --><!-- /ko -->
+    <script type="text/x-magento-init">
+        {
+            "#checkout": {
+                "Magento_Ui/js/core/app": <?= /* @noEscape */ $block->getJsLayout();?>
+            }
+        }
+    </script>
+    <script>
+        require.config({
+            config: {
+                mixins: {
+                    'Magento_Ui/js/view/messages': {
+                        'Amasty_Checkout/js/view/messages-mixin': true
+                    }
+                }
+            }
+        });
+        window.checkoutConfig = <?= /* @escapeNotVerified */ \Zend_Json::encode($block->getCheckoutConfig()); ?>;
+        // Create aliases for customer.js model from customer module
+        window.isCustomerLoggedIn = window.checkoutConfig.isCustomerLoggedIn;
+        window.customerData = window.checkoutConfig.customerData;
+        window.checkoutDesign = "<?= $helper->isModernCheckoutDesign() ? 'modern' : 'classic'?>";
+        window.checkoutLayout = "<?= $block->escapeHtml($helper->getLayoutTemplate())?>";
+    </script>
+    <script>
+        require([
+            'mage/url',
+            'Magento_Ui/js/block-loader'
+        ], function(url, blockLoader) {
+            blockLoader("<?=
+                /* @noEscape */ $block->getViewFileUrl('images/loader-1.gif'); ?>");
+            return url.setBaseUrl('<?= /* @noEscape */ $block->getBaseUrl();?>');
+        });
+    </script>
+<?php if ($bundleService->canCollectBundle()): ?>
+    <script>
+        require([
+            'rjsResolver',
+            'underscore',
+            '<?= \Amasty\Checkout\Model\Optimization\BundleService::COLLECT_SCRIPT_PATH ?>',
+        ], function(requireResolver, _, createBundle) {
+            requireResolver(_.debounce(createBundle, 1000));
+        });
+    </script>
+<?php endif; ?>
+
+    <?php if ($helper->isAddressSuggestionEnabled() && ($apiKey = $helper->getGoogleMapsKey())): ?>
+    <script>
+        window.amasty_checkout_regions = <?= /* @noEscape */ $helper->getRegionsJson() ?>;
+        function amasty_checkout_gmaps_init() {
+            require(['Amasty_Checkout/js/autocomplete'], function (autocomplete) {
+                autocomplete.isReady(true);
+            });
+        }
+    </script>
+    <script
+        src="https://maps.googleapis.com/maps/api/js?key=<?=
+        /* @noEscape */ $block->stripTags($apiKey);?>&libraries=places&callback=amasty_checkout_gmaps_init"
+        async defer>
+    </script>
+    <?php endif ?>
+</div>
+<?php // Custom, task #24714195 ?>
+<script type="text/javascript">
+    require(['jquery', 'underscore', 'custom_address_fields_logic'], function($, _, addressLogic) {
+        
+        $(document).ready(function(){
+            var lookingForCountry;
+            lookingForCountry = setInterval(function(){
+                let element = $('select[name="country_id"]');
+                console.log('element: ', element.length);
+                if(element.length > 0){
+                    console.log('element found!');
+                    clearInterval(lookingForCountry);
+                    element.on('change', function(event){
+                        addressLogic.updateFields($(this).val());
+                    })
+                    addressLogic.updateFields(element.val());
+                }
+            }, 250);
+            //make sure the input changes occur when going back from payment to shipping too
+            $(document).on('click', '.opc-progress-bar-item > span', function() {
+            	addressLogic.updateFields($('select[name="country_id"]').val());
+            });
+        })
+    });
+</script>
