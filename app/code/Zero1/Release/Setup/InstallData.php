@@ -76,20 +76,12 @@ In Mysql.php line 91:
             ->getDefaultGroupId($attributeSetId);
 
         $attributesToCreate = [
-            'personal_id_number' => [
-                'label' => 'Personal ID Number',
-                'sort_order' => 20,
-            ],
-            'personal_tax_id_number' => [
-                'label' => 'Personal Tax ID Number',
-                'sort_order' => 20,
-            ],
             'business_eori_number' => [
                 'label' => 'Business EORI Number',
                 'sort_order' => 20,
             ],
-            'abn_id' => [
-                'label' => 'Australian Business Number (ABN)',
+            'vat_number' => [
+                'label' => 'VAT Number',
                 'sort_order' => 20,
             ],
         ];
