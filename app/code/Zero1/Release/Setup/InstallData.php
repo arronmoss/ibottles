@@ -87,7 +87,6 @@ In Mysql.php line 91:
             'attribute_set_id' => $attributeSetId,
             //'group' => $attributeSetGroupId,
             'type' => 'varchar',
-            'input' => 'text',
             'required' => false,
             'user_defined' => true,
             'visible' => true,
