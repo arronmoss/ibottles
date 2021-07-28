@@ -80,10 +80,6 @@ In Mysql.php line 91:
                 'label' => 'Business EORI Number',
                 'sort_order' => 20,
             ],
-            'vat_number' => [
-                'label' => 'VAT Number',
-                'sort_order' => 20,
-            ],
         ];
 
         $defaultAttributeConfig = [
