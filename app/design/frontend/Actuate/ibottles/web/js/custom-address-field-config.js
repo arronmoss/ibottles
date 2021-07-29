@@ -12,11 +12,11 @@ define(['jquery', 'underscore'], function($, _) {
 		*/
         config: {
             /* checkout */
-            'div[name="shippingAddress.custom_attributes.vat_id"]': vatNumber,
+            'div[name="shippingAddress.custom_attributes.vat_number"]': vatNumber,
             'div[name="shippingAddress.custom_attributes.business_eori_number"]': eoriNumber,
             
             /* customer address edit */
-            'div[name="custom_attributes.vat_id"]': vatNumber,
+            'div[name="custom_attributes.vat_number"]': vatNumber,
             'div[name="custom_attributes.business_eori_number"]': eoriNumber,
         },
 
