@@ -1,14 +1,14 @@
 define(['jquery', 'underscore'], function($, _) {
     "use strict";
  
-    var vatNumber = ['AT','BE','BG','HR','CY','CZ','DK','EE','FI','FR','DE','GR','HU','IE','IT','LV','LT','LU','MT','NL','PL','PT','RO','SK','SI','ES','SE'];
-    var eoriNumber = ['AT','BE','BG','HR','CY','CZ','DK','EE','FI','FR','DE','GR','HU','IE','IT','LV','LT','LU','MT','NL','PL','PT','RO','SK','SI','ES','SE'];
+    var vatNumber = ['AT','BE','BG','HR','CY','CZ','DK','EE','FI','FR','DE','GR','HU','IE','IS','IT','LV','LT','LU','MT','NL','PL','PT','RO','SK','SI','ES','SE'];
+    var eoriNumber = ['AT','BE','BG','HR','CY','CZ','DK','EE','FI','FR','DE','GR','HU','IE','IS','IT','LV','LT','LU','MT','NL','PL','PT','RO','SK','SI','ES','SE'];
 
     return {
         /* 
 		Personal ID Number: CANARY ISLANDS NIF/NIE/DNI (ES?), SPAIN NIF/NIE/DNI, ITALY CF, PORTUGAL NIF/NIE/DNI, BRAZIL CPF, ARGENTINA, CHILE, COLOMBIA
 		Personal Tax ID Number:BOLIVA,COSTA RICA,ECUADOR,PARAGUARY,PERU,URUGUARY,VENEZUELA
-		Business EORI Number: Austria, Belgium, Bulgaria, Croatia, Cyprus, Czech Republic, Denmark, Estonia, Finland, France, Germany, Greece, Hungary, Ireland, Italy, Latvia, Lithuania, Luxembourg, Malta, Netherlands, Poland, Portugal, Romania, Slovakia, Slovenia, Spain and Sweden.
+		Business EORI Number: Austria, Belgium, Bulgaria, Croatia, Cyprus, Czech Republic, Denmark, Estonia, Finland, France, Germany, Greece, Hungary, Ireland, Iceland, Italy, Latvia, Lithuania, Luxembourg, Malta, Netherlands, Poland, Portugal, Romania, Slovakia, Slovenia, Spain and Sweden.
 		*/
         config: {
             /* checkout */
