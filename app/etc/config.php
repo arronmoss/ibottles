@@ -318,6 +318,11 @@ return [
                     'gtm_tag' => 'GTM-PZN4XQ7',
                     'can_anonymise' => '1'
                 ]
+            ],
+            'web' => [
+                'cookie' => [
+                    'cookie_restriction' => '1'
+                ]
             ]
         ]
     ]
