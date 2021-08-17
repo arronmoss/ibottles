@@ -7452,3 +7452,72 @@ button.action {
 		min-height: 245px;
 	}
 }
+
+
+
+/* Cookie notice */
+.message.global.cookie.ib-cookie {
+	background:#fff;
+	border-color:#fff;
+	font-size: 1.6rem;
+	line-height: 1.6;
+	z-index: 999999;
+	.container-1140 {
+		max-width: 1140px; margin: 0 auto;
+	}
+
+	.copy {width: 70%; float: left;padding: 30px 0;}
+	.actions {width: 30%; float: left;padding: 30px 0;}
+
+	h3 {
+		font-size: 2.6rem;
+	}
+	p {
+		margin-bottom:1em;
+	}
+	.cookie-actions {
+		display: table;
+		width: 100%;
+		height: 100%;
+		> div {
+			display: table-cell;
+			vertical-align: middle;
+		}
+	}
+	#btn-cookie-allow {
+		color: #fff;
+		font-size:2rem;
+		font-weight: 400;
+		text-transform: uppercase;
+		padding: 10px;
+		width: 100%;
+		max-width: 200px;
+    	margin-top: 15%;
+	}
+	.reject {
+	    font-size: 1.5rem;
+	    color: #333;
+	    text-decoration: underline;
+	    display: block;
+	    margin-top: 10px;
+	}
+	&:after {
+		content: '';
+		background: rgba(0,0,0,0.5);
+		position: fixed;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 240px; /* height of alert, adjust for mobile */
+		z-index: 998; /* below dialogue, above site */
+	}
+}
+
+@media only screen and (max-width:767px) {
+	.message.global.cookie.ib-cookie {
+		height: 340px;
+		.copy {width: 100%;padding: 0;}
+		.actions {width: 100%;padding: 0;}
+		#btn-cookie-allow {margin-top: 0;}
+	}
+}
