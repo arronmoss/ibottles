@@ -306,7 +306,24 @@ return [
         'WebShopApps_MatrixRate' => 1,
         'Yotpo_Yotpo' => 0,
         'Zero1_Base' => 1,
+        'Zero1_GDPR' => 1,
         'Zero1_Patches' => 1,
         'Zero1_ReleaseLibrary' => 1
+    ],
+    'system' => [
+        'default' => [
+            'gdpr' => [
+                'general' => [
+                    'active' => '1',
+                    'gtm_tag' => 'GTM-PZN4XQ7',
+                    'can_anonymise' => '1'
+                ]
+            ],
+            'web' => [
+                'cookie' => [
+                    'cookie_restriction' => '1'
+                ]
+            ]
+        ]
     ]
 ];

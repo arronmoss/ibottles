@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <tab id="gdpr" translate="label" sortOrder="100">
+            <label>Zero1 GDPR</label>
+        </tab>
+        <section id="gdpr" translate="label" type="text" sortOrder="100" showInDefault="1" showInWebsite="1" showInStore="1">
+            <class>separator-top</class>
+            <label>Zero1 GDPR</label>
+            <tab>gdpr</tab>
+            <resource>Zero1_GDPR::config_gdpr</resource>
+            <group id="general" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>General</label>
+                <field id="active" translate="label" type="select" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Enabled</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="gtm_tag" translate="label" type="text" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Google Tag Manager Container ID</label>
+                    <comment>By migrating ALL your third party JS including Beacons, Pixel Tracking, you can adhere to the GDPR regulations as this will ONLY load this container and trigger 3rd party cookies once you have obtained 'express consent' from your visitor</comment>
+                </field>
+                <field id="can_anonymise" translate="label" type="select" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Enable Customer Account Deletion / Anonymisation</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="customer_message" translate="label" type="text" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Message To Show Customer</label>
+                <comment>The message shown to customers on the frontend before they delete their account. (leave blank for default)</comment>
+                </field>
+                <!--<field id="cms_page" translate="label" type="select" showInDefault="1" showInWebsite="1" showInStore="1">-->
+                <!--<label>Information Page</label>-->
+                <!--<source_model>Magento\Config\Model\Config\Source\Cms\Page</source_model>-->
+                <!--</field>-->
+                <!--<field id="success_message" translate="label" type="text" showInDefault="1" showInWebsite="1" showInStore="1">-->
+                <!--<label>Success message</label>-->
+                <!--<comment>The message shown to customers on the frontend after deleting their account. (leave blank for default)</comment>-->
+                <!--</field>-->
+            </group>
+            <group id="support" translate="label" type="text" sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Support with GDPR</label>
+                <field id="support" translate="label" type="hidden" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <comment><![CDATA[<p><b>This extension DOES NOT automatically ensure full compliance with GDPR.</b></p><p>If you require support with all aspects of GDPR you can sign-up to a hassle-free package via our legal partner <a href="https://goo.gl/QLh8qR">GDPR Privacy Policy</a></p><iframe width="560" height="315" src="https://www.youtube.com/embed/1mDT-x2XnEg" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe><br><H3><a href="https://goo.gl/QLh8qR">Click here to find out more on the GDPR Privacy Policy Compliance Pack</a></h3>]]></comment>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>

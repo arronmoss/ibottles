@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="Zero1_GDPR::gdpr_menu"
+             title="Zero1 GDPR"
+             module="Zero1_GDPR"
+             sortOrder="110"
+             action="gdpr"
+             resource="Zero1_GDPR::index"
+             dependsOnModule="Zero1_GDPR"
+        />
+        <add id="Zero1_GDPR::config_menu"
+             title="Configuration"
+             module="Zero1_GDPR"
+             sortOrder="10"
+             resource="Zero1_GDPR::index"
+             parent="Zero1_GDPR::gdpr_menu"
+             action="adminhtml/system_config/edit/section/gdpr"
+        />
+    </menu>
+</config>

@@ -1,0 +1,21 @@
+<?php
+// @codingStandardsIgnoreFile
+
+/** @var \Zero1\GDPR\Block\Gtm $block */
+?>
+<?php if ($block->getHelper()->getActive() && !empty($block->getHelper()->getGtmTag())): ?>
+<script type="application/javascript">
+require(['jquery', 'mage/cookies'], function($, mage) {
+    allowedCookies = $.mage.cookies.get('<?php echo $block->getCookieAcceptedName(); ?>');
+    if (allowedCookies !== null) {
+        allowedWebsites = JSON.parse(allowedCookies);
+        if (allowedWebsites[<?php echo $block->getStoreId(); ?>] === 1) {
+            var gtm_tag = document.createElement('script');
+            gtm_tag.type = 'text/javascript';
+            gtm_tag.text = '(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({\'gtm.start\':new Date().getTime(),event:\'gtm.js\'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!=\'dataLayer\'?\'&l=\'+l:\'\';j.async=true;j.src=\'https://www.googletagmanager.com/gtm.js?id=\'+i+dl;f.parentNode.insertBefore(j,f);})(window,document,\'script\',\'dataLayer\',\'<?php echo $block->getHelper()->getGtmTag(); ?>\');';
+            document.body.appendChild(gtm_tag);
+        }
+    }
+});
+</script>
+<?php endif; ?>
