@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "cdbe4c82f7b817f69f990e89dade9711",
+    "content-hash": "761a745ca81f43447a33c6c5d24c340f",
     "packages": [
         {
             "name": "amasty/amcart",
@@ -16540,6 +16540,7 @@
                 "symfony",
                 "words"
             ],
+            "abandoned": "use `EnglishInflector` from the String component instead",
             "time": "2020-03-27T16:56:45+00:00"
         },
         {
@@ -17169,6 +17170,28 @@
                 "standards"
             ],
             "time": "2019-11-18T17:27:11+00:00"
+        },
+        {
+            "name": "taxamo/tax",
+            "version": "1.0.0",
+            "dist": {
+                "type": "zip",
+                "url": "https://repo.magento.com/archives/taxamo/tax/taxamo-tax-1.0.0.0.zip",
+                "shasum": "f6a2b7a5a198913cdbc2d5de66b1355da8fc7f8d"
+            },
+            "require": {
+                "magento/module-checkout": "100.3.*||100.4.*"
+            },
+            "type": "magento2-module",
+            "autoload": {
+                "psr-4": {
+                    "Taxamo\\Tax\\": ""
+                },
+                "files": [
+                    "registration.php"
+                ]
+            },
+            "description": "Taxamo Module for Magento 2"
         },
         {
             "name": "tedivm/jshrink",
@@ -18493,6 +18516,7 @@
                 }
             ],
             "description": "Guzzle6 transport for Vault PHP client",
+            "abandoned": true,
             "time": "2019-03-10T06:17:37+00:00"
         },
         {

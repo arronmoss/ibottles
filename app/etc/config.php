@@ -298,6 +298,7 @@ return [
         'Swissup_AddressFieldManager' => 1,
         'Swissup_Core' => 1,
         'Swissup_FieldManager' => 1,
+        'Taxamo_Tax' => 1,
         'Temando_ShippingRemover' => 1,
         'Trustpilot_Reviews' => 1,
         'Ubertheme_Ubdatamigration' => 0,

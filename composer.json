@@ -41,6 +41,7 @@
         "mdoq/module-connector": "^1.4",
         "stripe/stripe-payments": "^1.9",
         "stripe/stripe-php": "^7",
+        "taxamo/tax": "^1.0",
         "zero1/magento2-release-library": "^1.0",
         "zero1limited/base": "^1.0",
         "zero1limited/magento2-patches": "^1.0"
