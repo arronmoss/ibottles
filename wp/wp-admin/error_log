@@ -1,0 +1,4 @@
+[30-Jul-2020 06:53:05 UTC] PHP Warning:  Unknown: failed to open stream: No such file or directory in Unknown on line 0
+[30-Jul-2020 06:53:05 UTC] PHP Fatal error:  Unknown: Failed opening required '/home/ibottles/public_html/blog/wordfence-waf.php' (include_path='.:/opt/cpanel/ea-php72/root/usr/share/pear') in Unknown on line 0
+[30-Jul-2020 06:56:15 UTC] PHP Warning:  Unknown: failed to open stream: No such file or directory in Unknown on line 0
+[30-Jul-2020 06:56:15 UTC] PHP Fatal error:  Unknown: Failed opening required '/home/ibottles/public_html/blog/wordfence-waf.php' (include_path='.:/opt/cpanel/ea-php72/root/usr/share/pear') in Unknown on line 0
